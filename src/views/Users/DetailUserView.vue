@@ -8,14 +8,17 @@
         class="col col-8 col-lg-9 col-xl-10 p-0"
         style="background-color: #f2f5fa"
       >
+        <div class="btn mt-2 ms-3 btn-outline-info">
+          <router-link
+            :to="{ name: 'UserList' }"
+            class="text-black text-decoration-none"
+            >Back</router-link
+          >
+        </div>
         <div class="text-white p-3">
           <user-detail-header-component class="w-100 bg-white" />
         </div>
-        <div class="mt-auto d-flex">
-          <div class="bg-secondary">DeleteUser</div>
-          <div class="bg-primary text-white">Btn_Back</div>
-        </div>
-        <div class="mt-3 rounded-4 bg-light" style="background-color: #f2f5fa">
+        <div class="mt-0 rounded-4 bg-light" style="background-color: #f2f5fa">
           <navbar-user-detail-component class="w-100 p-2" />
         </div>
         <div class="bg-light my-3 p-3">

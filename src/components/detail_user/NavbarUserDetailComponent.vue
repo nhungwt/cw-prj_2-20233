@@ -5,7 +5,7 @@
         v-for="option in options"
         :key="option"
         :to="{ name: option }"
-        class="list-group-item mx-2 rounded-5 col text-center"
+        class="list-group-item mx-2 rounded-1 col text-center btn btn-outline-info"
         >{{ option }}</router-link
       >
     </ul>

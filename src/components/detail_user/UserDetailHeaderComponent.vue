@@ -18,8 +18,11 @@
           <hr class="text-secondary mt-2" />
         </div>
         <div class="row">
-          <div class="">
-            <a class="btn btn-info" target="__blank" href="">Edit</a>
+          <div
+            class="btn btn-outline-secondary"
+            @click.prevent="deleteUser(user.id)"
+          >
+            DeleteUser
           </div>
         </div>
       </div>
@@ -28,17 +31,41 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
       infors: ["Full name", "Email", "Mobile", "Department"],
-      user: {
-        id: "12345",
-        full_name: "Nhung",
-        email: "email@co-well.vn",
-        department: "ES2-2",
-      },
+      // user: {
+      //   id: "1",
+      //   full_name: "Nhung",
+      //   email: "email@co-well.vn",
+      //   department: "ES2-2",,
+      //   isActive: true
+      // },
+      user: "",
     };
+  },
+  async created() {
+    try {
+      const res = await axios.get("http://localhost:3000/users/1");
+      this.user = res.data;
+    } catch (e) {
+      console.error(e);
+    }
+  },
+  methods: {
+    deleteUser() {
+      if (confirm(`'Are you sure to delete user ${this.user.full_name}?'`)) {
+        // this.axios
+        //   .delete("http://localhost:3000/users/" + id)
+        //   .then((result) => {
+        //     console.warn(result);
+        //     this.get;
+        //   });
+        this.user.isActive = false;
+      }
+    },
   },
 };
 </script>

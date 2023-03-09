@@ -1,0 +1,35 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "full_name": "Nhung1",
+            "email": "email@co-well.vn",
+            "department": "ES2-2",
+            "isActive": true
+        },
+        {
+            "id": "2",
+            "full_name": "Nhung2",
+            "email": "email@co-well.vn",
+            "department": "ES2-2",
+            "isActive": true
+        },
+        {
+            "id": "3",
+            "full_name": "Nhung3",
+            "email": "email@co-well.vn",
+            "department": "ES2-2",
+            "isActive": true
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
+}
